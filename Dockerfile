@@ -2,7 +2,11 @@ FROM armv7/armhf-debian:jessie
 MAINTAINER Rui Carmo https://github.com/rcarmo
 
 # Update the system and set up packages
-RUN apt-get update && apt-get dist-upgrade -y && apt-get install \
+RUN sed -i "s/security.debian.org/mirrors.ustc.edu.cn\/debian-security/g" /etc/apt/sources.list \
+ && sed -i "s/httpredir.debian.org/mirrors.ustc.edu.cn/g" /etc/apt/sources.list \
+ && apt-get update \
+ && apt-get dist-upgrade -y \
+ && apt-get install \
     apt-transport-https \
     wget \
     cups \
