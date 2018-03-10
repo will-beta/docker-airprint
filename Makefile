@@ -1,4 +1,4 @@
-IMAGE_NAME=rcarmo/airprint:armhf
+IMAGE_NAME=will-beta/airprint
 build: Dockerfile
 	docker build -t ${IMAGE_NAME} .
 
