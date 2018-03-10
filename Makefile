@@ -1,4 +1,4 @@
-IMAGE_NAME=will-beta/airprint
+IMAGE_NAME=willbeta/airprint
 build: Dockerfile
 	docker build -t ${IMAGE_NAME} .
 
