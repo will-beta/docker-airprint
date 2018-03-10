@@ -1,5 +1,5 @@
-FROM armv7/armhf-debian:jessie
-MAINTAINER Rui Carmo https://github.com/rcarmo
+FROM debian:jessie
+MAINTAINER will-beta https://github.com/will-beta
 
 # Update the system and set up packages
 RUN sed -i "s/security.debian.org/mirrors.ustc.edu.cn\/debian-security/g" /etc/apt/sources.list \
